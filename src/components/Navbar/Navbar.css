@@ -1,0 +1,192 @@
+.navbar {
+  width: 100%;
+  padding: 30px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  font-size: 14px;
+  color: #e5e5e5;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10% transparent);
+  z-index: 1;
+}
+.navbar .bars {
+  padding: 10px 10px;
+  font-size: x-large;
+  display: none;
+}
+@media (max-width: 900px) {
+  .navbar .bars {
+    display: block;
+  }
+  .navbar-middle {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    padding: 30px 4%;
+  }
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.navbar-left img {
+  width: 140px;
+}
+.navbar-middle ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  font-weight: 500;
+}
+.navbar-middle ul li {
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+@media (max-width: 1350px) {
+  .navbar-middle ul li:nth-child(6), /* Browse by Languages */
+  .navbar-middle ul li:nth-child(5)  /* My List */ {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  /* Browse by Languages */
+  .navbar-middle ul li:nth-child(4)  /* My List */ {
+    display: none;
+  }
+}
+.navbar-middle ul li:hover {
+  border-bottom: 2px solid red;
+  padding-bottom: 4px;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.navbar-right .icons {
+  width: 20px;
+  cursor: pointer;
+}
+.navbar-right .profile {
+  border-radius: 4px;
+  width: 35px;
+}
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.navbar .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  background: #191919;
+  padding: 18px 22px;
+  border-radius: 2px;
+  text-decoration: underline;
+  z-index: 1;
+  display: none;
+}
+.navbar .dropdown p {
+  font-size: 13px;
+  cursor: pointer;
+}
+.navbar-profile:hover .dropdown {
+  display: block;
+}
+
+/* ---------- Sidebar base styles ---------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* hidden by default */
+  width: 260px;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 16px 18px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.sidebar-open {
+  left: 0; /* slide in */
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sidebar-close-btn {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.sidebar-close-btn button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Sidebar menu list */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  font-size: 14px;
+}
+.sidebar-menu li:hover {
+  padding-left: 20px;
+  border-bottom: 1px solid rgb(255, 0, 0);
+  transition: padding 0.2s ease-in;
+}
+
+/* ---------- Overlay behind sidebar ---------- */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+/* ---------- Bars icon visibility ---------- */
+.bars {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Show bars & hide middle on small screens */
+@media (max-width: 768px) {
+  .navbar-middle {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+  }
+
+  .navbar-right p {
+    display: none; /* optional */
+  }
+}
