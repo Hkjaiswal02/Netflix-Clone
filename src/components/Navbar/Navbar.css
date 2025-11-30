@@ -104,6 +104,41 @@
   display: block;
 }
 
+@media (max-width: 860px) {
+  .navbar {
+    width: 100%;
+    padding: 9px 3%;
+    font-size: 0.9rem;
+  }
+  .navbar-left img {
+    width: 80px;
+  }
+  .navbar .bars {
+    font-size: large;
+  }
+  .navbar-right {
+    gap: 18px;
+  }
+  .navbar-right .icons {
+    width: 16px;
+  }
+  .navbar-right .profile {
+    border-radius: 4px;
+    width: 22px;
+  }
+  .navbar-profile {
+    gap: 7px;
+  }
+  .navbar .dropdown p {
+    font-size: 0.4rem;
+  }
+  .navbar .dropdown {
+    width: 40px;
+    background: #191919;
+    padding: 4px;
+  }
+}
+
 /* ---------- Sidebar base styles ---------- */
 .sidebar {
   position: fixed;
