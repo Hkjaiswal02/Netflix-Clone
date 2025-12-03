@@ -54,6 +54,9 @@
 .hero-btns .btn.dark-btn:hover {
   background: #6d6d6e66;
 }
+.more-cards {
+  padding: 6%;
+}
 
 @media (max-width: 1100px) {
   .caption-img {
@@ -90,7 +93,7 @@
   }
   .hero-btns {
     gap: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   .hero-btns .btn img {
     width: 15px;
@@ -110,5 +113,16 @@
     max-width: 140px;
     font-size: 0.3rem;
     margin-bottom: 10px;
+  }
+  .hero-caption {
+    position: absolute;
+    top: 50px;
+  }
+  .hero-btns .btn {
+    padding: 2px 3px;
+    font-size: 0.5rem;
+  }
+  .hero-btns .btn img {
+    width: 10px;
   }
 }
